@@ -21,23 +21,6 @@ $(function() {
     });
     
     
-    //===== Section Menu Active
-
-    var scrollLink = $('.page-scroll');
-    // Active link switching
-    $(window).scroll(function () {
-        var scrollbarLocation = $(this).scrollTop();
-
-        scrollLink.each(function () {
-
-            var sectionOffset = $(this.hash).offset().top - 73;
-
-            if (sectionOffset <= scrollbarLocation) {
-                $(this).parent().addClass('active');
-                $(this).parent().siblings().removeClass('active');
-            }
-        });
-    });
     
     
     //===== close navbar-collapse when a  clicked
@@ -262,4 +245,34 @@ $(function() {
     
     
     
+});
+
+
+
+
+
+// CUSTOM SCRIPTS HERE
+
+
+
+$(document).ready(function() {
+
+  // NAVBAR SHOW HIDE START
+  $("#navopen").show();
+  $("#navclose").hide();
+  $("#navbarclick").click(function() {
+    if ($("#navstatus").val() == 'opened') {
+          $("#navclose").show();
+          $("#navopen").hide();
+          $("#navstatus").val("");
+    } else {
+          $("#navopen").show();
+          $("#navclose").hide();
+          $("#navstatus").val("opened");
+    }
+  });
+  // NAVBAR SHOW HIDE END
+
+
+
 });
