@@ -1600,6 +1600,15 @@ p.form-message.success.form-message.error, p.form-message.error.form-message.err
 
 /* CUSTOM CSS BELOW */
 
+.title{
+  font-family: Open Sans;
+}
+
+.des{
+  font-family: Open Sans;
+  font-size: 14px;
+}
+
 .row {
   display: flex;
   align-items: center;
